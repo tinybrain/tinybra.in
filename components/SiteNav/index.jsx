@@ -20,7 +20,7 @@ class SiteNav extends React.Component {
             <ul>
               { menuItems.map(function([name, ref], key) {
                   let active = location.pathname === prefixLink(ref) ? "active" : null
-                  return <li><Link key={key} to={ref} className={active}>{name}</Link></li>
+                  return <li key={key}><Link to={ref} className={active}>{name}</Link></li>
               })}
             </ul>
           </nav>
