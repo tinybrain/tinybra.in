@@ -10,16 +10,16 @@ import './style.css';
 class SitePage extends React.Component {
   render() {
     const {route} = this.props
-    const post = route.page.data
+    const page = route.page.data
 
     return (
-      <div dangerouslySetInnerHTML={ {    __html: post.body} } />
+      return null
     )
   }
 }
 
 SitePage.propTypes = {
-  post: React.PropTypes.object.isRequired,
+  page: React.PropTypes.object.isRequired,
   pages: React.PropTypes.array
 }
 
