@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import DocumentTitle from 'react-document-title'
 import { config } from 'config'
-import WorkListItem from '../../components/WorkListItem'
+//import WorkListItem from '../../components/WorkListItem'
 
 class Nyaaa extends React.Component {
   render() {
@@ -26,20 +26,11 @@ class Work extends React.Component {
   render () {
 
     const {route} = this.props
-    const workPages = route.pages.filter(p => p.data.category === 'work')
-    const pages = sortBy(workPages, (p) => 'data.date')
 
     return (
       <DocumentTitle title={config.siteTitle}>
         <div className="container">
-          {/* <WorkList {...this.props}/> */}
-          { pages.map((o, i) => {
-            return (
-              <section key={i}>
-                <Nyaaa obj={ o.data }/>
-              </section>
-            )
-          })}
+          Lies, all of it.
         </div>
       </DocumentTitle>
     )

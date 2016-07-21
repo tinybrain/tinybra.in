@@ -16,15 +16,17 @@ class SiteNav extends React.Component {
         const { location } = this.props
 
         return (
-          <nav className='top-nav'>
-            <ul>
-              { menuItems.map(function([name, ref], key) {
-                  let active = location.pathname === prefixLink(ref) ? "active" : null
-                  return <li key={key}><Link to={ref} className={active}>{name}</Link></li>
-              })}
-            </ul>
-          </nav>
-          )
+          <div className='u-full-width navbar'>
+            <div className='container'>
+              <ul className='navbar-list'>
+                { menuItems.map(function([name, link], key) {
+                    let style = location.pathname === prefixLink(link) ? 'active navbar-list' : 'navbar-list'
+                    return <li key={key} className="navbar-link"><Link to={link} className={style}>{name}</Link></li>
+                })}
+              </ul>
+            </div>
+          </div>
+        )
     }
 }
 

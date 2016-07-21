@@ -4,10 +4,8 @@ import { prefixLink } from 'gatsby-helpers'
 import { config } from 'config'
 import SiteNav from '../components/SiteNav'
 
-//import '../static/css/reset.css'
-//import '../static/css/base.css'
-//import '../static/css/typography.css'
-
+import '../css/normalize.css'
+import '../css/skeleton.css'
 import '../css/style.css'
 
 class Template extends React.Component {

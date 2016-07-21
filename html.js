@@ -32,7 +32,6 @@ module.exports = React.createClass({
           />
           <title>{title}</title>
           <link rel="shortcut icon" href={this.props.favicon} />
-          {/*<TypographyStyle typography={typography} />*/}
           {css}
         </head>
         <body>
