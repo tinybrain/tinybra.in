@@ -1,0 +1,20 @@
+.things {
+  margin-bottom: 5em;
+}
+
+.thing {
+  margin-bottom: 3em;
+}
+
+div.which-things {
+  margin-bottom: 0;
+}
+
+.things-name {
+  font-weight: 700;
+  margin-bottom: 1.4em;
+}
+
+.waffle {
+  margin-top: 1.2em;
+}

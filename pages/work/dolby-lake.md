@@ -1,9 +1,9 @@
 ---
 title: "Dolby Lake / Lab.gruppen"
-description: "Flagship loudspeaker processors and equalisers used by just about everyone."
+sub: "Flagship loudspeaker processors and equalisers used by just about everyone."
 category: work
-path: "/lake"
-date: 2007
+path: "/lake/"
+index: 4
 ---
 
 I had a range of responsibilities related to product specification and development, hardware and software validation, manufacturing tests and software development. I contributed to various parts of the Dolby Lake Controller, firmware update and preset management utilities (Win32/DirectX), and firmware for Clair iO, Lake Contour/Mesa, Dolby Lake Processor (ARM/Nucleus) and Lab.gruppen PLM series (Ti C67x/LAOS).

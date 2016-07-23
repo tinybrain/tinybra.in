@@ -1,9 +1,9 @@
 ---
-title: "SBA Vault"
-description: "An enterprise system for optimising and automating the ingest, management and distribution of music videos and audio programs for retail and commercial licensing."
+title: SBA Vault
+sub: An enterprise system for optimising and automating the ingest, management and distribution of music videos and audio programs for retail and commercial licensing.
 category: work
-path: "/sba-vault"
-date: 2006
+path: /vault/
+index: 5
 ---
 
 The system was designed to eliminate redundant and erroneous handling of media assets, which previously had been processed manually and managed using several disparate databases and excel spreadsheets.

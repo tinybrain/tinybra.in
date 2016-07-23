@@ -3,8 +3,6 @@ import yaml from 'js-yaml'
 import DocumentTitle from 'react-document-title'
 import { config } from 'config'
 
-import Resume from '../components/Resume'
-
 module.exports = React.createClass({
   propTypes () {
     return {
@@ -16,7 +14,12 @@ module.exports = React.createClass({
 
     return (
       <DocumentTitle title={`${config.siteTitle} | ${data.title}`}>
-        <Resume {...this.props} />
+        <div>
+          <h1>{data.title}</h1>
+          <p>Raw view of yaml file</p>
+          <p>{ data.category }</p>
+          <pre dangerouslySetInnerHTML={{ __html: yaml.dump(data) }} />
+        </div>
       </DocumentTitle>
     )
   },
