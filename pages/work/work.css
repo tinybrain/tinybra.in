@@ -1,20 +1,20 @@
-.things {
+.work-list {
   margin-bottom: 5em;
 }
 
-.thing {
+.work-item {
   margin-bottom: 3em;
 }
 
-div.which-things {
+div.work-header {
   margin-bottom: 0;
 }
 
-.things-name {
+.title {
   font-weight: 700;
   margin-bottom: 1.4em;
 }
 
-.waffle {
+.blurb {
   margin-top: 1.2em;
 }

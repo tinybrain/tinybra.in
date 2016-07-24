@@ -10,23 +10,45 @@ import './work.css'
 
 class Work extends React.Component {
 
+  renderImage (image, key) {
+    return (
+      <div key={key} className="image">
+        <a href={`/images/${image}.jpg`}>
+          <img src={`/images/${image}-thumb.jpg`} alt={image} />
+        </a>
+      </div>
+    )
+  }
+
+  renderProject (project, index) {
+    const { title, body, images } = project.data
+
+    return (
+      <div key={index} className="work-item row">
+        <hr />
+        <div className="title">{title}</div>
+        <div className="blurb" dangerouslySetInnerHTML={{ __html: body }} />
+
+        {typeof images !== 'undefined' &&
+          <div className="images-row">
+            {images.map(this.renderImage, this)}
+          </div>
+        }
+      </div>
+    )
+  }
+
   render () {
     const pages = this.props.route.pages
 
-    const wp = pages.filter(q => q.data.category === 'work')
+    const workPages = pages.filter(q => q.data.category === 'work')
 
-    console.log(wp)
-
-    pages.map(o => {
-      // console.log(o)
-      return null
-    }, this)
-
-    // console.log(this.props)
+    console.log(workPages)
 
     return (
-      <div className="things container">
-        <h5 className="which-things">AAAA</h5>
+      <div className="work-list container">
+        <h5 className="which-things">Work</h5>
+        {workPages.map(this.renderProject, this)}
       </div>
     )
   }

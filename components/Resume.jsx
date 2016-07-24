@@ -36,17 +36,17 @@ class ResumePage extends React.Component {
 
     return (
       <div>
-        <ResumeThing t={page.employment}/>
-        <ResumeThing t={page.patents}/>
-        <ResumeThing t={page.education}/>
+        <ResumeThing t={page.employment} />
+        <ResumeThing t={page.patents} />
+        <ResumeThing t={page.education} />
       </div>
     )
   }
 }
 
 ResumePage.propTypes = {
-  //page: React.PropTypes.object.isRequired,
-  pages: React.PropTypes.array
+  t: React.PropTypes.object.isRequired,
+  pages: React.PropTypes.array,
 }
 
 export default ResumePage
