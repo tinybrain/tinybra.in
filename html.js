@@ -1,9 +1,6 @@
 import React from 'react'
 import DocumentTitle from 'react-document-title'
-
 import { prefixLink } from 'gatsby-helpers'
-import { TypographyStyle } from 'typography-react'
-import typography from './utils/typography'
 
 const BUILD_TIME = new Date().getTime()
 

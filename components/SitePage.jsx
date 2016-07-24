@@ -5,7 +5,7 @@ import { prefixLink } from 'gatsby-helpers'
 import DocumentTitle from 'react-document-title'
 import access from 'safe-access'
 import { config } from 'config'
-import './style.css';
+import './SitePage.css';
 
 class SitePage extends React.Component {
   render() {

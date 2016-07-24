@@ -10,11 +10,6 @@ class MarkdownWrapper extends React.Component {
 
     let content
 
-    console.log(page)
-
-
-
-
     return (
       <DocumentTitle title={ `${page.title} - ${config.siteTitle}` }>
         <div className='container'>
