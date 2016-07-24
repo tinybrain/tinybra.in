@@ -1,52 +1,53 @@
 import React from 'react'
 import './Resume.css'
 
-class ResumeThing extends React.Component {
-  render () {
-    const { title, items } = this.props.t
+class Resume extends React.Component {
+
+  renderItem (item, key) {
     return (
-      <div className="things container">
-        <h5 className="which-things">{title}</h5>
-        <hr /> {items.map(function(t, i) {
-          return (
-            <div key={i} className="thing row">
-              <div className="period two columns">{t.period}</div>
-              <div className="details ten columns">
-                <div className="title">{t.title}</div>
-                <div className="sub">{t.sub}</div>
-                {typeof t.highlights != 'undefined' && <ul className="waffle">
-                  {t.highlights.map(function(h, i) {
-                    return <li key={i}>{h}</li>
-                  })}
-                </ul>
-}
-              </div>
-            </div>
-          )
-        })}
+      <div id={key} className="employment-item row">
+        <div className="period two columns">{item.period}</div>
+        <div className="details ten columns">
+          <div className="title">{item.title}</div>
+          <div className="sub">{item.sub}</div>
+          {typeof item.highlights !== 'undefined' &&
+            <ul className="waffle">
+              {item.highlights.map((h, k) => <li key={k}>{h}</li>)}
+            </ul>
+          }
+        </div>
       </div>
     )
   }
-}
 
-class ResumePage extends React.Component {
-  render() {
-    const {route} = this.props
+  renderSection (section, key) {
+    return (
+      <div key={key} className="resume-section">
+        <h5>{section.title}</h5>
+        <hr />
+        {section.items.map(this.renderItem, this)}
+      </div>
+    )
+  }
+
+  render () {
+    const { route } = this.props
     const page = route.page.data
 
     return (
-      <div>
-        <ResumeThing t={page.employment} />
-        <ResumeThing t={page.patents} />
-        <ResumeThing t={page.education} />
+      <div className="container">
+        <h2>Resumé</h2>
+        {this.renderSection(page.employment)}
+        {this.renderSection(page.patents)}
+        {this.renderSection(page.education)}
       </div>
     )
   }
 }
 
-ResumePage.propTypes = {
-  t: React.PropTypes.object.isRequired,
+Resume.propTypes = {
+  route: React.PropTypes.object.isRequired,
   pages: React.PropTypes.array,
 }
 
-export default ResumePage
+export default Resume

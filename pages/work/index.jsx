@@ -43,8 +43,6 @@ class Work extends React.Component {
 
     const workPages = pages.filter(q => q.data.category === 'work')
 
-    console.log(workPages)
-
     return (
       <div className="work-list container">
         <h5 className="which-things">Work</h5>
