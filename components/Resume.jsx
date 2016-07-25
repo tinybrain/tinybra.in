@@ -8,23 +8,19 @@ class Resume extends React.Component {
       <div id={key} className="employment-item row">
         <div className="period two columns">{item.period}</div>
         <div className="details ten columns">
-          <div className="title">{item.title}</div>
-          <div className="sub">{item.sub}</div>
-          {typeof item.highlights !== 'undefined' &&
-            <ul className="waffle">
-              {item.highlights.map((h, k) => <li key={k}>{h}</li>)}
-            </ul>
-          }
+          <div className="bugsy">
+            {item.title}<br />{item.sub}
+          </div>
+          <div dangerouslySetInnerHTML={{ __html: item.blurb }} />
         </div>
       </div>
     )
   }
 
-  renderSection (section, key) {
+  renderSection (section) {
     return (
-      <div key={key} className="resume-section">
-        <h5>{section.title}</h5>
-        <hr />
+      <div className="resume-section">
+        <h5><span>{section.title}</span></h5>
         {section.items.map(this.renderItem, this)}
       </div>
     )
@@ -36,7 +32,6 @@ class Resume extends React.Component {
 
     return (
       <div className="container">
-        <h2>Resumé</h2>
         {this.renderSection(page.employment)}
         {this.renderSection(page.patents)}
         {this.renderSection(page.education)}
