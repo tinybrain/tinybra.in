@@ -1,3 +1,4 @@
+title: Resume
 patents:
   title: Patents
   items:
@@ -16,7 +17,7 @@ education:
       title: A.Mus (Violin)
       sub: Australian Music Examinations Board
 
-skills: 
+skills:
   title: Skills
   items:
     - title: Languages

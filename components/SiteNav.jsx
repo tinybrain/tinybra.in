@@ -1,15 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
+import { config } from 'config'
 
 import './SiteNav.css'
 
 class SiteNav extends React.Component {
 
   render () {
+    if (config.hideNav) {
+      return null
+    }
+
     const menuItems = [
       ['Home', '/'],
-      ['Resumé', '/resume/'],
+      ['Resume', '/resume/'],
       ['Work', '/work/'],
       ['Contact', '/contact/'],
     ]
@@ -17,22 +22,20 @@ class SiteNav extends React.Component {
     const { location } = this.props
 
     return (
-      <div className="docked navbar u-full-width">
-        <div className="container">
-          <ul className="navbar-list">
-            {menuItems.map(([name, link], key) => {
-              let style = location.pathname === prefixLink(link)
-                ? 'navbar-link active'
-                : 'navbar-link'
-              return (
-                <li key={key} className="navbar-item">
-                  <Link to={link} className={style}>{name}</Link>
-                </li>
-              )
-            })}
-          </ul>
-        </div>
-      </div>
+      <nav className="site-nav">
+        <ul className="site-nav container">
+          {menuItems.map(([name, link], key) => {
+            let style = location.pathname === prefixLink(link)
+              ? 'site-nav active'
+              : 'site-nav'
+            return (
+              <li key={key} className="top-link active">
+                <Link to={link} className={style}>{name}</Link>
+              </li>
+            )
+          })}
+        </ul>
+      </nav>
     )
   }
 }

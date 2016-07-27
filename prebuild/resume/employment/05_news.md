@@ -2,6 +2,7 @@
 period: 1997 - 1998
 employer: News Interactive / AFL / Seven Network
 title: Web Developer
+location: Sydney
 ---
 
 * Built the first version of [afl.com.au](http://www.afl.com.au).

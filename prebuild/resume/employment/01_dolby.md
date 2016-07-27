@@ -1,8 +1,8 @@
 ---
 period: 2006 - 2013
-sub: Dolby Laboratories
+employer: Dolby Laboratories
 title: Staff Software Engineer Research
-url: https://www.dolby.com/
+location: Sydney
 ---
 
 * Tool development and prototyping for a wide range of research activities

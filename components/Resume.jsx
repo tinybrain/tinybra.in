@@ -1,27 +1,53 @@
 import React from 'react'
+import Title from './Title'
+
 import './Resume.css'
 
 class Resume extends React.Component {
 
-  renderItem (item, key) {
+  renderSkillsItem (item, key) {
+    const { title, sub } = item
+
     return (
-      <div id={key} className="employment-item row">
-        <div className="period two columns">{item.period}</div>
-        <div className="details ten columns">
-          <div className="bugsy">
-            {item.title}<br />{item.sub}
-          </div>
-          <div dangerouslySetInnerHTML={{ __html: item.blurb }} />
+      <div id={key} className="skill-group">
+        <h3><strong>{title}</strong></h3>
+        {sub}<br />
+        <br />
+      </div>
+    )
+  }
+
+  renderEmploymentItem (item, key) {
+    const { employer, title, location, period, blurb } = item
+
+    return (
+      <div id={key} className="job">
+        <div className="job-header">
+          <strong>{employer}</strong><br />
+          {title}<br />
+          {location}, {period}<br />
         </div>
+        <div className="blurb" dangerouslySetInnerHTML={{ __html: blurb }} />
       </div>
     )
   }
 
   renderSection (section) {
+    let items = []
+    console.log(section.title)
+
+    if (section.title === 'Employment') {
+      items = section.items.map(this.renderEmploymentItem, this)
+    }
+
+    if (section.title === 'Skills') {
+      items = section.items.map(this.renderSkillsItem, this)
+    }
+
     return (
-      <div className="resume-section">
-        <h5><span>{section.title}</span></h5>
-        {section.items.map(this.renderItem, this)}
+      <div className="section">
+        {<h2>{section.title}</h2>}
+        {items}
       </div>
     )
   }
@@ -29,12 +55,17 @@ class Resume extends React.Component {
   render () {
     const { route } = this.props
     const page = route.page.data
+    console.log(page.title)
 
     return (
       <div className="container">
-        {this.renderSection(page.employment)}
-        {this.renderSection(page.patents)}
-        {this.renderSection(page.education)}
+        <Title title={page.title} />
+        <div className="left">
+          {this.renderSection(page.employment)}
+        </div>
+        <div className="right">
+          {this.renderSection(page.skills)}
+        </div>
       </div>
     )
   }

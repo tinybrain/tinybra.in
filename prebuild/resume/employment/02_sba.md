@@ -1,8 +1,8 @@
 ---
 period: 2003 - 2006
-sub: SBA Music
+employer: SBA Music
 title: Lead Developer / Systems Engineer / AV Engineer
-url: https://www.sbamusic.com.au
+location: Sydney
 ---
 
 * Enterprise software for digital media ingest, management and distribution.

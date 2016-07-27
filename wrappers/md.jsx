@@ -9,10 +9,11 @@ class MarkdownWrapper extends React.Component {
     const page = route.page.data
 
     return (
-      <DocumentTitle title={`${page.title} - ${config.siteTitle}`}>
+      <DocumentTitle title={`${page.title} | ${config.siteTitle}`}>
         <div className="container">
-          <h4>{page.title}</h4>
-          <hr />
+          <div className="title">
+            <h1>{page.title}</h1>
+          </div>
           <div dangerouslySetInnerHTML={{ __html: page.body }} />
         </div>
       </DocumentTitle>

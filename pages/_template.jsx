@@ -1,10 +1,9 @@
 import React from 'react'
 import SiteNav from '../components/SiteNav'
 
-import '../css/normalize.css'
-import '../css/skeleton.css'
-// import '../css/skeletonx.css'
-import '../css/style.css'
+import '../static/css/reeeset.css'
+import '../static/css/base.css'
+import '../static/css/type.css'
 
 class Template extends React.Component {
   render () {
@@ -13,7 +12,6 @@ class Template extends React.Component {
     return (
       <div className="wrapper">
         <SiteNav {...this.props} />
-        <div className="header"></div>
         {children}
       </div>
     )

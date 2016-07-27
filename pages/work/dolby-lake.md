@@ -2,7 +2,7 @@
 title: "Dolby Lake / Lab.gruppen"
 sub: "Flagship loudspeaker processors and equalisers used by just about everyone."
 category: work
-path: "/lake/"
+path: "/work/lake/"
 index: 4
 ---
 

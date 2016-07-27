@@ -1,4 +1,5 @@
 {
+  "title": "Resume",
   "patents": {
     "title": "Patents",
     "items": [
@@ -86,22 +87,23 @@
     "items": [
       {
         "period": "2006 - 2013",
-        "sub": "Dolby Laboratories",
+        "employer": "Dolby Laboratories",
         "title": "Staff Software Engineer Research",
-        "url": "https://www.dolby.com/",
+        "location": "Sydney",
         "blurb": "<ul>\n<li>\n<p>Tool development and prototyping for a wide range of research activities</p>\n</li>\n<li>\n<p>Enterprise Voice research platform (Dolby Voice / Conference Phone)</p>\n</li>\n<li>\n<p>Dolby Axon and Desktop Client</p>\n</li>\n<li>\n<p>Lake / Lab.gruppen series of loudspeaker processors, equalisers and power amplifiers for high end touring applications</p>\n</li>\n</ul>\n"
       },
       {
         "period": "2003 - 2006",
-        "sub": "SBA Music",
+        "employer": "SBA Music",
         "title": "Lead Developer / Systems Engineer / AV Engineer",
-        "url": "https://www.sbamusic.com.au",
+        "location": "Sydney",
         "blurb": "<ul>\n<li>\n<p>Enterprise software for digital media ingest, management and distribution.</p>\n</li>\n<li>\n<p>Audio and video playback systems for commercial and retail installations.</p>\n</li>\n<li>\n<p>Administration of IT infrastructure, storage and disaster recovery, audio and video edit facilities &amp; CD/DVD duplication.</p>\n</li>\n</ul>\n<p>Clients: Nandos, McDonalds, CUE, Cotton On, Pioneer</p>\n"
       },
       {
         "period": "2002",
-        "sub": "Kyunet",
+        "employer": "Kyunet",
         "title": "Web Developer / Media Producer",
+        "location": "Sydney",
         "blurb": "<ul>\n<li>\n<p>UI/UX development and production of music, audio and video content for online language e-learning products.</p>\n</li>\n<li>\n<p>Multilingual voice content for marketing and in-house training (Cisco).</p>\n</li>\n<li>\n<p>Linux based asset batch editing and processing tools.</p>\n</li>\n</ul>\n"
       },
       {
@@ -115,6 +117,7 @@
         "period": "1997 - 1998",
         "employer": "News Interactive / AFL / Seven Network",
         "title": "Web Developer",
+        "location": "Sydney",
         "blurb": "<ul>\n<li>\n<p>Built the first version of <a href=\"http://www.afl.com.au\">afl.com.au</a>.</p>\n</li>\n<li>\n<p>Frontend development for various News Interactive “portals”, primarly <a href=\"http://www.news.com.au\">news.com.au</a> and <a href=\"http://www.realestate.com.au\">realestate.com.au</a>.</p>\n</li>\n</ul>\n"
       },
       {
