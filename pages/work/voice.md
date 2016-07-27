@@ -2,7 +2,7 @@
 title: Dolby Voice & Conference Phone
 sub: A research and proof of concept platform for spatial audio applied to tele-presence.
 category: work
-path: /voice/
+path: /work/voice
 index: 2
 ---
 

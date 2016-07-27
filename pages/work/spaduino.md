@@ -2,7 +2,7 @@
 title: spaduino
 sub: Arduino + Raspberry Pi + iPhone + Hot Tub!
 category: personal
-path: /spaduino
+path: /work/spaduino
 index: 6
 ---
 

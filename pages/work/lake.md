@@ -1,8 +1,8 @@
 ---
-title: "Dolby Lake / Lab.gruppen"
-sub: "Flagship loudspeaker processors and equalisers used by just about everyone."
+title: Dolby Lake / Lab.gruppen
+sub: Flagship loudspeaker processors and equalisers used by just about everyone.
 category: work
-path: "/work/lake/"
+path: /work/lake
 index: 4
 ---
 
