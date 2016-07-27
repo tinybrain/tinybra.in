@@ -14,6 +14,7 @@ class Work extends React.Component {
   render () {
     const { route } = this.props
     const page = route.page.data
+    
     console.log('Work says...', this.props)
 
     return (

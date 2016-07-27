@@ -1,17 +1,27 @@
 import React from 'react'
+import { config } from 'config'
+
 import SiteNav from '../components/SiteNav'
 
 import '../static/css/reeeset.css'
 import '../static/css/base.css'
 import '../static/css/type.css'
 
+import Title from '../components/Title'
+
 class Template extends React.Component {
   render () {
     const { children } = this.props
 
+    let nav = config.renderSiteNav
+    ? <SiteNav {...this.props} /> : []
+
+    let title = config.renderTitles
+    ? <Title {...this.props} /> : []
+
     return (
       <div className="wrapper">
-        <SiteNav {...this.props} />
+        {nav}
         {children}
       </div>
     )

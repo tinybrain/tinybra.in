@@ -7,21 +7,21 @@ import { intro } from './_data.yaml'
 
 console.log(intro)
 
-class Home extends React.Component {
+class Index extends React.Component {
   render () {
     return (
       <DocumentTitle title={`${config.siteTitle}`}>
         <div className="container">
-          <h1>Simon Lang</h1>
+          <div dangerouslySetInnerHTML={{ __html: intro }} />
         </div>
       </DocumentTitle>
     )
   }
 }
 
-Home.propTypes = {
+Index.propTypes = {
   route: React.PropTypes.object.isRequired,
   pages: React.PropTypes.array,
 }
 
-export default Home
+export default Index

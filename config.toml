@@ -1,3 +1,5 @@
 siteTitle="tinybra.in"
 linkPrefix = "/"
-hideNav = false
+
+renderSiteNav = true
+renderTitles = true
