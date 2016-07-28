@@ -1,0 +1,19 @@
+.job-header {
+  margin-bottom: 0.5rem;
+}
+
+.job {
+  margin-bottom: 1.6rem;
+}
+
+.left {
+  lost-column: 3/5;
+}
+.right {
+  lost-column: 2/5;
+}
+
+
+ul {
+  list-style-type: none;
+}

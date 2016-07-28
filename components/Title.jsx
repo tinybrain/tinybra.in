@@ -4,7 +4,6 @@ import './Title.css'
 class Title extends React.Component {
   render () {
     const { title } = this.props
-    console.log('Title says...', title, this.props)
     return (
       <div className="title">
         <h1>{title}</h1>
@@ -14,8 +13,7 @@ class Title extends React.Component {
 }
 
 Title.propTypes = {
-  title: React.PropTypes.object.isRequired,
-  route: React.PropTypes.object.isRequired,
+  title: React.PropTypes.string.isRequired,
 }
 
 export default Title
