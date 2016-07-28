@@ -3,3 +3,4 @@ linkPrefix = "/"
 
 renderSiteNav = true
 renderTitles = true
+renderDebug = true
