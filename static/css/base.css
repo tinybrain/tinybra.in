@@ -3,8 +3,20 @@ html {
   color: #444;
 }
 
+/*body {
+  lost-utility: edit;
+}*/
+
 h1 { color: #333; }
 h2 { color: #444; }
+
+hr {
+  margin-top: 3rem;
+  margin-bottom: 2.5rem;
+  border-width: 0;
+  border-top: 1px solid #AAA;
+  background-color: #999;
+}
 
 .wrapper {
 }
@@ -12,20 +24,6 @@ h2 { color: #444; }
 .container {
   lost-center: 800px;
 }
-
-/*.section {
-  border-top: 1px solid #AAA;
-  padding-top: 1.6rem;
-}*/
-
-.hero {
-  width: 70%;
-}
-
-.half {
-  lost-column: 1/2;
-}
-
 
 /*
 a {

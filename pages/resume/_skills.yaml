@@ -1,0 +1,33 @@
+title: Skills
+languages:
+  title: Languages
+  items:
+    - C, 15, 83
+    - Obj-C, 8, 87
+    - C++, 12, 72
+    - C#, 10, 54
+    - '#!, 20, 67'
+    - JS, 15, 62
+    - Ruby, 5, 33
+    - Python, 10, 41
+    - php, 20, 45
+    - Perl, 20, 12
+    - Matlab, 7, 62
+    - BASIC, 37, 100
+
+design:
+  title: Design
+  items:
+    - Photoshop, 20, 85
+    - Illustrator, 15, 14
+    - Freehand, 20, 94
+    - Sketch, 1, 45
+
+platforms:
+  title: Platforms
+  items:
+    - Mac, 30, 95
+    - Win, 25, 76
+    - Linux, 16, 65
+    - RTOSs, 7, 53
+    - Bare Metal, 8, 72

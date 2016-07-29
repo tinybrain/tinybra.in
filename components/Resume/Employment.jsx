@@ -6,33 +6,28 @@ class Employment extends React.Component {
 
   renderEmploymentItem (item, key) {
     const { employer, title, location, period } = item
-    console.log('map', employer)
-
     return (
-      <div id={key} className="job">
-        <div className="job-header">
-          <strong>{employer}</strong> • {title}<br />
-          {period}, {location}<br />
-        </div>
+      <div key={key} className="item">
+        <strong>{employer}</strong> • {title}<br />
+        {period}, {location}
       </div>
     )
   }
 
   render () {
-    const { utitle, udata } = this.props
-    console.log(udata)
+    console.log(this.props.employment)
+    const { title, items } = this.props.employment
     return (
-      <div>
-        <h2>{utitle}</h2>
-        {udata.map(this.renderEmploymentItem, this)}
+      <div className="block">
+        <h2>{title}</h2>
+        {items.map(this.renderEmploymentItem, this)}
       </div>
     )
   }
 }
 
 Employment.propTypes = {
-  utitle: React.PropTypes.object.isRequired,
-  udata: React.PropTypes.array.isRequired,
+  employment: React.PropTypes.object.isRequired,
 }
 
 export default Employment
