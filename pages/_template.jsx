@@ -6,7 +6,7 @@ import SiteNav from '../components/SiteNav'
 import '../static/css/reeeset.css'
 import '../static/css/base.css'
 import '../static/css/type.css'
-// import '../static/fonts/entypo-plus/style.css'
+import '../static/fonts/entypo-plus/sprite.css'
 import '../static/fonts/fontawesome/style.css'
 
 // import SiteNav from '../components/SiteNav'
