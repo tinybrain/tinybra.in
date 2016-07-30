@@ -20,7 +20,7 @@ class SkillTable extends React.Component {
   renderSkillset (skillset) {
     return (
       <div key={skillset.title} className="skillset">
-        <h3><strong>{skillset.title}</strong></h3>
+        <h3>{skillset.title}</h3>
         {skillset.items.map(this.renderSkill, this)}
       </div>
     )

@@ -20,8 +20,8 @@ class WorkTemplate extends React.Component {
     })
 
     this.icons = {
-      prev: '\u003c',
-      next: '\u003e'
+      prev: 'fa fa-angle-left fa-2x',
+      next: 'fa fa-angle-right fa-2x'
     }
   }
 
@@ -29,7 +29,7 @@ class WorkTemplate extends React.Component {
     const n = navmap[path]
     return (n && (['prev', 'next'].map(t => (
       <Link key={t} className={`work-nav-${t}`} to={n[t].path}>
-        {this.icons[t]}
+        <i className={this.icons[t]} />
       </Link>
     ))))
   }

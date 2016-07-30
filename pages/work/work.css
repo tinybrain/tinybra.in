@@ -7,23 +7,20 @@
 }
 
 .work-nav a {
-  font-family: 'MiniStrzalki';
-  font-size: 3rem;
-  text-decoration: none;
-  width: 4rem;
+  width: 3rem;
   text-align: center;
 }
 
 .work-nav-prev {
   position: absolute;
-  top: -24px;
-  left: -5rem;
+  top: -0px;
+  left: -3rem;
 }
 
 .work-nav-next {
   position: absolute;
-  top: -24px;
-  right: -5rem;
+  top: -0px;
+  right: -3rem;
 }
 
 .work {

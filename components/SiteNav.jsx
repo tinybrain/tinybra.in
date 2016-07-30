@@ -26,8 +26,8 @@ class SiteNav extends React.Component {
         <ul className="site-nav container">
           {menuItems.map(([name, link], key) => {
             let style = location.pathname === prefixLink(link)
-              ? 'site-nav active'
-              : 'site-nav'
+            ? 'site-nav active'
+            : 'site-nav'
             return (
               <li key={key} className="top-link active">
                 <Link to={link} className={style}>{name}</Link>
