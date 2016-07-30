@@ -2,8 +2,6 @@ import React from 'react'
 import DocumentTitle from 'react-document-title'
 import { config } from 'config'
 
-import PageTitle from '../components/PageTitle'
-
 class MarkdownWrapper extends React.Component {
   render () {
     const { route } = this.props
@@ -11,10 +9,7 @@ class MarkdownWrapper extends React.Component {
 
     return (
       <DocumentTitle title={`${config.siteTitle}`}>
-        <div className="container">
-          <PageTitle title={page.title} />
-          <div dangerouslySetInnerHTML={{ __html: page.body }} />
-        </div>
+        <div dangerouslySetInnerHTML={{ __html: page.body }} />
       </DocumentTitle>
     )
   }

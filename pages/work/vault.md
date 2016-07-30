@@ -2,7 +2,7 @@
 title: SBA Vault
 sub: An enterprise system for optimising and automating the ingest, management and distribution of music videos and audio programs for retail and commercial licensing.
 category: work
-path: /work/sba-vault
+path: /work/vault
 index: 5
 ---
 

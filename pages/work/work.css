@@ -1,0 +1,35 @@
+.clear {
+  lost-utility: clearfix;
+}
+
+.work-nav {
+  position: relative;
+}
+
+.work-nav a {
+  font-family: 'MiniStrzalki';
+  font-size: 3rem;
+  text-decoration: none;
+  width: 4rem;
+  text-align: center;
+}
+
+.work-nav-prev {
+  position: absolute;
+  top: -24px;
+  left: -5rem;
+}
+
+.work-nav-next {
+  position: absolute;
+  top: -24px;
+  right: -5rem;
+}
+
+.work {
+  height: 100%;
+}
+
+.work-waffle {
+  lost-waffle: 1/3;
+}
