@@ -3,7 +3,7 @@ import { employment } from './_data.json'
 import { languages, platforms, design } from './_skills.yaml'
 import { patents, education } from './_extra.yaml'
 
-import Title from '../../components/Title'
+import { Title } from '../../components/Title'
 import Basic from '../../components/Resume/Basic'
 import Employment from '../../components/Resume/Employment'
 import SkillTable from '../../components/Resume/SkillTable'
