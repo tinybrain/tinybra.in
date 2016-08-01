@@ -1,13 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router'
-import Title from '../../components/Title'
-
-// import sortBy from 'lodash/sortBy'
-// import {RouteHandler, Link} from 'react-router'
-// import {prefixLink} from 'gatsby-helpers'
-// import DocumentTitle from 'react-document-title'
-// import access from 'safe-access'
-// import {config} from 'config'
 
 import './work.css'
 
@@ -28,9 +20,6 @@ class Work extends React.Component {
   }
 
   render () {
-    const { route } = this.props
-    const page = route.page.data
-
     return (
       <div>
         <div className=".work">

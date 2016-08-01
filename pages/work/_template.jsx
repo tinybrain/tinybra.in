@@ -1,6 +1,7 @@
 import React from 'react'
-import Title from '../../components/Title'
 import { Link } from 'react-router'
+import { IoChevronLeft, IoChevronRight } from 'react-icons/lib/io'
+import Title from '../../components/Title'
 
 import navdata from './_navdata.yaml'
 
@@ -15,13 +16,13 @@ class WorkTemplate extends React.Component {
       this.nav[e.path] = {
         current: a[i],
         prev: a[(i - 1 + l) % l],
-        next: a[(i + 1) % l]
+        next: a[(i + 1) % l],
       }
     })
 
     this.icons = {
-      prev: 'fa fa-angle-left fa-2x',
-      next: 'fa fa-angle-right fa-2x'
+      prev: <IoChevronLeft />,
+      next: <IoChevronRight />,
     }
   }
 
@@ -29,7 +30,7 @@ class WorkTemplate extends React.Component {
     const n = navmap[path]
     return (n && (['prev', 'next'].map(t => (
       <Link key={t} className={`work-nav-${t}`} to={n[t].path}>
-        <i className={this.icons[t]} />
+        {this.icons[t]}
       </Link>
     ))))
   }

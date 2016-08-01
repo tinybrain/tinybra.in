@@ -1,5 +1,6 @@
 import React from 'react'
 import Title from '../../components/Title'
+import { IoIonic, IoChevronLeft, IoChevronRight } from 'react-icons/lib/io'
 
 // import sortBy from 'lodash/sortBy'
 // import {RouteHandler, Link} from 'react-router'
@@ -10,24 +11,20 @@ import Title from '../../components/Title'
 
 // import './work.css'
 
-class Work extends React.Component {
+class Test extends React.Component {
   render () {
-    const { route } = this.props
-    const page = route.page.data
-    
-    console.log('Work says...', this.props)
-
     return (
       <div className="container">
-        <div>Work!</div>
+        <Title title="Test" />
+        <div>Test!</div>
+        <div>
+          <IoIonic size="4em" />
+          <IoChevronLeft />
+          <IoChevronRight />
+        </div>
       </div>
     )
   }
 }
 
-Work.propTypes = {
-  route: React.PropTypes.object.isRequired,
-  pages: React.PropTypes.array,
-}
-
-export default Work
+export default Test
