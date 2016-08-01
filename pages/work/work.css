@@ -30,12 +30,3 @@
 .work-waffle {
   lost-waffle: 1/3;
 }
-
-
-.debug-header {
-  position: fixed;
-  left: 5px;
-  bottom: 5px;
-  border: 1px solid #999;
-  padding: 1em;
-}
