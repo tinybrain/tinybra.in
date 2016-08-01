@@ -1,59 +1,59 @@
 import React from 'react'
 import { Link } from 'react-router'
 import { IoChevronLeft, IoChevronRight } from 'react-icons/lib/io'
-import Title from '../../components/Title'
 
-import navdata from './_navdata.yaml'
+import data from '../../lib/data.js'
 
 import './work.css'
 
+const icons = {
+  prev: <IoChevronLeft />,
+  next: <IoChevronRight />,
+}
+
+const renderNavLink = (type, nav) => {
+  const navlink = nav[type]
+  if (!navlink) return null
+  return (
+    <Link key={type} className={`work-nav-${type}`} to={navlink}>
+      {icons[type]}
+    </Link>
+  )
+}
+
+const renderSubNav = (path, navmap) => {
+  const nav = navmap[path]
+  console.log('renderSubNav', nav)
+  if (!nav) return null
+  const navLinks = ['prev', 'next'].map(type => renderNavLink(type, nav))
+
+  return (
+    <div className="work-nav">
+      <h2>{nav.title}</h2>
+      {navLinks}
+    </div>
+  )
+}
+
 class WorkTemplate extends React.Component {
-  constructor (props) {
-    super(props)
-    this.nav = { '/work': null }
-    navdata.forEach((e, i, a) => {
-      const l = a.length
-      this.nav[e.path] = {
-        current: a[i],
-        prev: a[(i - 1 + l) % l],
-        next: a[(i + 1) % l],
-      }
-    })
-
-    this.icons = {
-      prev: <IoChevronLeft />,
-      next: <IoChevronRight />,
-    }
-  }
-
-  renderNavLinks (path, navmap) {
-    const n = navmap[path]
-    return (n && (['prev', 'next'].map(t => (
-      <Link key={t} className={`work-nav-${t}`} to={n[t].path}>
-        {this.icons[t]}
-      </Link>
-    ))))
-  }
 
   render () {
     const { children, location, route } = this.props
 
-    /* for the sake of the children ... don't look at this bit */
-
-    const child = route.childRoutes.find(e =>
-      e.path === location.pathname
-    )
-
-    const title = child && child.page.data.title
+    const subnav = []
+    if (location.pathname !== route.path) {
+      subnav.push(renderSubNav(location.pathname, data.navmap))
+    }
 
     return (
       <div className="container">
-        <Title title="Work" />
-        <br />
-        <div className="work-nav">
-          <h2>{title}</h2>
-          {this.renderNavLinks(location.pathname, this.nav)}
+        <div className="title">
+          <Link to={route.path}>
+            <h1>Work</h1>
+          </Link>
         </div>
+        <br />
+        {subnav}
         {children}
       </div>
     )
