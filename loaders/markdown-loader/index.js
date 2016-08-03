@@ -1,7 +1,9 @@
 import frontMatter from 'front-matter'
-import markdownIt from 'markdown-it'
-import hljs from 'highlight.js'
 import objectAssign from 'object-assign'
+
+import markdownIt from 'markdown-it'
+
+import hljs from 'highlight.js'
 
 const highlight = (str, lang) => {
   if ((lang !== null) && hljs.getLanguage(lang)) {
@@ -31,11 +33,19 @@ const md = markdownIt({
   .use(require('markdown-it-deflist'))
   .use(require('markdown-it-abbr'))
   .use(require('markdown-it-attrs'))
+  .use(require('markdown-it-block-image'), {
+    outputContainer: true,
+    containerClassName: 'block-image-container',
+  })
+  .use(require('markdown-it-block-embed'), {
+    containerClassName: 'block-video-container',
+  })
 
 module.exports = function (content) {
   this.cacheable()
   const meta = frontMatter(content)
-  const body = md.render(meta.body)
+  // const body = md.render(meta.body)
+  const body = meta.body
   const result = objectAssign({}, meta.attributes, {
     body,
   })

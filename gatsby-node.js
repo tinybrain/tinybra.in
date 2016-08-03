@@ -3,15 +3,23 @@ var lost = require("lost")
 var cssnext = require("postcss-cssnext")
 
 exports.modifyWebpackConfig = function(config, env) {
-    config.merge({
-        postcss: [
-            lost(),
-            rucksack(),
-            cssnext({
-                browsers: ['>1%', 'last 2 versions']
-            })
-        ]
-    })
+  console.log(config)
+  console.log(env)
 
-    return config
-};
+  config.merge({
+    resolve: {
+      moduleDirectories: ['components', 'lib'],
+    },
+    postcss: [
+      lost(),
+      rucksack(),
+      cssnext({
+        browsers: ['>1%', 'last 2 versions']
+      })
+    ]
+  })
+
+  // config.removeLoader('markdown')
+
+  return config
+}

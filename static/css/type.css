@@ -21,3 +21,12 @@ h3 { font-size: 1.27rem; }
 .light {
   font-weight: 300;
 }
+
+
+blockquote {
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-bottom: 2em;
+  font-style: italic;
+  color: #666;
+}

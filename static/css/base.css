@@ -18,11 +18,15 @@ hr {
   background-color: #999;
 }
 
+p {
+  margin-bottom: 1.6rem;
+}
+
 .wrapper {
 }
 
 .container {
-  lost-center: 860px;
+  lost-center: 800px;
 }
 
 
@@ -35,6 +39,28 @@ hr {
   padding-top: 1.4rem;
   padding-bottom: 1.6rem;
 }
+
+
+
+a {
+  color: #7d7d7d;
+}
+
+a:link,
+a:visited {
+  color: #727296;
+}
+a:hover {
+  color: #484848;
+}
+a:active {
+  color: #0000FF;
+}
+
+.popup:nth-child(n+2) {
+  margin-left: 0.6rem;
+}
+
 
 
 /*

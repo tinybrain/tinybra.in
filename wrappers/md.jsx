@@ -1,5 +1,8 @@
 import React from 'react'
 import DocumentTitle from 'react-document-title'
+
+import MDReactComponent from 'markdown-react-js'
+
 import { config } from 'config'
 
 class MarkdownWrapper extends React.Component {
@@ -9,7 +12,8 @@ class MarkdownWrapper extends React.Component {
 
     return (
       <DocumentTitle title={`${config.siteTitle}`}>
-        <div dangerouslySetInnerHTML={{ __html: page.body }} />
+        {/* <div dangerouslySetInnerHTML={{ __html: page.body }} /> */}
+        <MDReactComponent text={page.body} />
       </DocumentTitle>
     )
   }
