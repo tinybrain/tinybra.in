@@ -1,39 +1,15 @@
 import React from 'react'
-import { Link } from 'react-router'
 import MDReactComponent from 'markdown-react-js'
+
 import { DebugNav } from 'components/Debug'
 import { SubNav } from 'components/SubNav'
 import { Title } from 'components/Title'
 
-// import handleIterate from 'components/markdown/StyledMarkdown'
+import mdconfig from 'components/markdown'
 
 import data from '../../lib/data.js'
 
 import './work.css'
-
-const PopupImage = (props) => {
-  const { src, alt } = props
-  return (
-    <Link className="popup" to={`/images/${src}-jpg`}>
-      <img src={`/images/${src}-thumb.jpg`} alt={alt} />
-    </Link>
-  )
-}
-
-PopupImage.propTypes = {
-  src: React.PropTypes.string.isRequired,
-  alt: React.PropTypes.string.isRequired,
-}
-
-const handleIterate = (Tag, props, children, level) => { // eslint-disable-line
-
-  if (Tag === 'img') {
-    return <PopupImage {...props} />
-  }
-
-  return <Tag {...props}>{children}</Tag>
-}
-
 
 class WorkTemplate extends React.Component { // eslint-disable-line
   render () {
@@ -49,7 +25,14 @@ class WorkTemplate extends React.Component { // eslint-disable-line
 
     if (location.pathname !== route.path) {
       subnav = <SubNav nav={nav} />
-      childs = <MDReactComponent text={rroute.page.data.body} onIterate={handleIterate} />
+      childs = (
+        <MDReactComponent
+          markdownOptions={mdconfig.options}
+          plugins={mdconfig.plugins}
+          text={rroute.page.data.body}
+          onIterate={mdconfig.handleIterate}
+        />
+      )
     }
 
     return (
