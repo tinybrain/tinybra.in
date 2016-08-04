@@ -34,6 +34,7 @@
     "typography-react": "^0.10.4"
   },
   "devDependencies": {
+    "autoprefixer": "^6.3.7",
     "babel-core": "^6.9.1",
     "babel-loader": "^6.2.4",
     "babel-preset-react-hmre": "^1.1.1",
@@ -44,18 +45,20 @@
     "eslint-plugin-jsx-a11y": "^1.2.0",
     "eslint-plugin-react": "^5.2.2",
     "gh-pages": "^0.11.0",
+    "image-webpack-loader": "^2.0.0",
+    "lost": "^6.7.2",
+    "markdown-it-block-image": "0.0.3",
+    "markdown-it-container": "^2.0.0",
+    "markdown-react-js": "git+https://github.com/endaaman/markdown-react-js.git",
     "null-loader": "^0.1.1",
     "postcss-loader": "^0.9.1",
     "react-transform-catch-errors": "^1.0.2",
     "react-transform-hmr": "^1.0.4",
     "redbox-react": "^1.2.10",
     "reeeset": "0.0.5",
-    "style-loader": "^0.13.1",
-    "webpack": "^1.13.1",
     "rucksack-css": "^0.8.5",
-    "lost": "^6.7.2",
-    "image-webpack-loader": "^2.0.0",
-    "autoprefixer": "^6.3.7"
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1"
   },
   "keywords": [
     "gatsby"
