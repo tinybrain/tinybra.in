@@ -4,13 +4,11 @@ import Lightbox from 'react-image-lightbox'
 import access from 'safe-access'
 import _ from 'lodash'
 
-import { DebugNav } from 'components/Debug'
-import { SubNav } from 'components/SubNav'
-import { Title } from 'components/Title'
-
+import Title from 'components/site/Title'
+import SubNav from 'components/site/SubNav'
+import DebugNav from 'components/site/DebugNav'
 import mdconfig from 'components/markdown'
-import data from 'lib/data'
-
+import data from 'data/navigation'
 import config from 'config'
 
 import './work.css'

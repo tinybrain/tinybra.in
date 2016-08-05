@@ -3,7 +3,7 @@ import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import { config } from 'config'
 
-import './SiteNav.css'
+import './sitenav.css'
 
 class SiteNav extends React.Component {
 

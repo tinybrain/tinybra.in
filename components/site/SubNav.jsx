@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router'
-import './SubNav.css'
-
 import { IoChevronLeft, IoChevronRight } from 'react-icons/lib/io'
+
+import './subnav.css'
 
 const icons = {
   prev: <IoChevronLeft />,
@@ -42,4 +42,4 @@ SubNav.propTypes = {
   nav: React.PropTypes.object.isRequired,
 }
 
-export default { SubNav }
+export default SubNav

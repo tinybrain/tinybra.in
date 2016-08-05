@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
-import './Title.css'
+import './title.css'
 
 const Title = (props) => {
   const { title, path } = props
@@ -20,4 +20,4 @@ Title.propTypes = {
   path: React.PropTypes.string,
 }
 
-export default { Title }
+export default Title

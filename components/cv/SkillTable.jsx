@@ -27,7 +27,6 @@ class SkillTable extends React.Component {
   }
 
   render () {
-    console.log(this.props)
     const skillsets = this.props.skillsets
 
     return (

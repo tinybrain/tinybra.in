@@ -1,4 +1,4 @@
-import rawdata from './navdata.yaml'
+import rawdata from './_navdata.yaml'
 
 const addLinks = (item, index, siblings, parent = {}) => { // eslint-disable-line no-unused-vars
   const links = item

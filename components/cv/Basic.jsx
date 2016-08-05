@@ -15,7 +15,6 @@ class Basic extends React.Component {
   }
 
   render () {
-    console.log(this.props)
     const { title, items } = this.props.data
     return (
       <div className="block">

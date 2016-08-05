@@ -15,7 +15,6 @@ class Employment extends React.Component {
   }
 
   render () {
-    console.log(this.props.employment)
     const { title, items } = this.props.employment
     return (
       <div className="block">

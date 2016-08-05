@@ -1,9 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router'
+import data from 'data/navigation'
 
 import './work.css'
-
-import data from '../../lib/data.js'
 
 const renderWorkTile = (item) => {
   const { path, title } = item

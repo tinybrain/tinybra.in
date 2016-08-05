@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
-import './Debug.css'
+import './debugnav.css'
 
 const DebugNav = (props) => {
   const { nav } = props
@@ -25,4 +25,4 @@ DebugNav.propTypes = {
   nav: React.PropTypes.object.isRequired,
 }
 
-export default { DebugNav }
+export default DebugNav

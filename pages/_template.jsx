@@ -1,13 +1,10 @@
 import React from 'react'
+import SiteNav from 'components/site/SiteNav'
 import { config } from 'config'
 
-import SiteNav from '../components/SiteNav'
-
-import '../static/css/reeeset.css'
-import '../static/css/base.css'
-import '../static/css/type.css'
-
-// import SiteNav from '../components/SiteNav'
+import 'static/css/reeeset.css'
+import 'static/css/base.css'
+import 'static/css/type.css'
 
 class Template extends React.Component {
   render () {
@@ -15,9 +12,6 @@ class Template extends React.Component {
 
     let nav = config.renderSiteNav
     ? <SiteNav {...this.props} /> : []
-
-    // let title = config.renderTitles
-    // ? <Title {...this.props} /> : []
 
     return (
       <div className="wrapper">

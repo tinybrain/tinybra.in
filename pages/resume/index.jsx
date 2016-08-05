@@ -1,14 +1,13 @@
 import React from 'react'
-import { employment } from './_data.json'
-import { languages, platforms, design } from './_skills.yaml'
-import { patents, education } from './_extra.yaml'
 
-import { Title } from '../../components/Title'
-import Basic from '../../components/Resume/Basic'
-import Employment from '../../components/Resume/Employment'
-import SkillTable from '../../components/Resume/SkillTable'
+import Title from 'components/site/Title'
+import Basic from 'components/cv/Basic'
+import Employment from 'components/cv/Employment'
+import SkillTable from 'components/cv/SkillTable'
 
-import "./style.css"
+import cv from 'data/cv'
+
+import './style.css'
 
 class Resume extends React.Component {
 
@@ -18,17 +17,17 @@ class Resume extends React.Component {
         <Title title="Resume" />
         <div className="row">
           <div className="left">
-            <Employment employment={employment} />
+            <Employment employment={cv.employment} />
           </div>
           <div className="right">
-            <SkillTable skillsets={[languages, platforms, design]} />
+            <SkillTable skillsets={[cv.languages, cv.platforms, cv.design]} />
           </div>
         </div>
         <div className="row section">
-          <Basic data={patents} />
+          <Basic data={cv.patents} />
         </div>
         <div className="row section">
-          <Basic data={education} />
+          <Basic data={cv.education} />
         </div>
       </div>
     )

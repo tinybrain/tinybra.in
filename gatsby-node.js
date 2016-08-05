@@ -19,7 +19,5 @@ exports.modifyWebpackConfig = function(config, env) {
     ]
   })
 
-  // config.removeLoader('markdown')
-
   return config
 }
