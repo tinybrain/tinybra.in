@@ -4,8 +4,8 @@ sub: Realtime system for facilitating trusted CALM act compliance in broadcast n
 category: work
 path: /work/evolution
 index: 1
-images:
-  - evolution
+lightbox:
+  evolution: Dolby Evolution
 ---
 
 A Realtime system for facilitating trusted CALM act compliance in broadcast networks.
@@ -14,6 +14,6 @@ It consisted of a realtime E-AC-3 transcoder capable of updating a streamâ€™s â€
 
 ::: screenies
 
-![Dolby Evolution](evolution)
+![lightbox](0)
 
 :::

@@ -4,8 +4,10 @@ sub: Haptic LFE courtesy of a vortex wave cannon
 category: work
 path: /work/boom
 index: 1
-images:
-  - evolution
+lightbox:
+  boom-poster: 5.BOOM Poster
+  boom-reaper: 5.BOOM Reaper Layup
+
 ---
 
 
@@ -13,8 +15,8 @@ Haptic LFE courtesy of a vortex wave cannon.
 
 ::: screenies
 
-![5.boom Poster](boom-poster)
+![lightbox](0)
 
-![5.boom Layup](boom-reaper)
+![lightbox](1)
 
 :::

@@ -1,6 +1,7 @@
 import React from 'react'
 import MDReactComponent from 'markdown-react-js'
 import Lightbox from 'react-image-lightbox'
+import _ from 'lodash'
 
 import { DebugNav } from 'components/Debug'
 import { SubNav } from 'components/SubNav'
@@ -11,61 +12,81 @@ import data from '../../lib/data.js'
 
 import './work.css'
 
-let images = []
+const loopy = (i, d, n) => ((i + d + n) % n)
+
+const navvy = (curr, n) => {
+  const prev = loopy(curr, -1, n)
+  const next = loopy(curr, +1, n)
+  return { curr, prev, next }
+}
 
 class WorkTemplate extends React.Component {
   constructor (props) {
     super(props)
 
     this.state = {
-      isOpen: false,
+      lit: false,
       index: 0,
     }
 
-    this.openLightbox = this.openLightbox.bind(this)
-    this.closeLightbox = this.closeLightbox.bind(this)
-    this.moveNext = this.moveNext.bind(this)
-    this.movePrev = this.movePrev.bind(this)
-    this.handleImageClick = this.handleImageClick.bind(this)
+    this.images = []
+    this.imagemap = {}
+
+    this.lightboxClose = this.lightboxClose.bind(this)
+    this.lightboxNext = this.lightboxNext.bind(this)
+    this.lightboxPrev = this.lightboxPrev.bind(this)
+
+    this.onImageClick = this.onImageClick.bind(this)
     this.handleIterate = this.handleIterate.bind(this)
   }
 
-  openLightbox () {
-    this.setState({ isOpen: true })
-  }
-
-  closeLightbox () {
-    this.setState({ isOpen: false })
-  }
-
-  moveNext () {
-    console.log(this)
-    this.setState({ index: (this.state.index + 1) % images.length })
-  }
-
-  movePrev () {
-    this.setState({ index: (this.state.index + images.length - 1) % images.length })
-  }
-
-  handleImageClick (i, e) {
+  onImageClick (i, e) {
     e.preventDefault()
-    console.log('clicky clicky', i, e)
-    console.log(this.state)
-    console.log(images)
-    this.openLightbox()
+    console.log('clicky clicky', i)
+    this.setState({ index: i, lit: true })
+
+    console.log(this.lightboxSources())
+  }
+
+  indexDelta (d) {
+    const [i, n] = [this.state.index, this.images.length]
+    return ((i + d + n) % n)
+  }
+
+  lightboxSources () {
+    const [prev, curr, next] = [-1, 0, 1]
+      .map(d => this.images[this.indexDelta(d)].src)
+    return { prev, curr, next }
+  }
+
+  lightboxClose () {
+    this.setState({ lit: false, index: 0 })
+  }
+
+  lightboxNext () {
+    this.setState({ index: this.indexDelta(+1) })
+  }
+
+  lightboxPrev () {
+    this.setState({ index: this.indexDelta(+1) })
   }
 
   handleIterate (Tag, props, children, level) { // eslint-disable-line
     if (Tag === 'img') {
-      const { src, alt } = props
-      const image=`/images/${props.src}.jpg`
-      const thumb=`/images/${props.src}-thumb.jpg`
-      images.push(image)
-      console.log(image, this)
+      let { src, alt } = props
+
+      if (alt === 'lightbox') {
+        let i = parseInt(src, 10)
+        let img = this.images[src]
+        return (
+          <a className="popup" key={i} href={img.src} onClick={e => this.onImageClick(i, e)}>
+            <img src={img.thumb} alt={img.alt} />
+          </a>
+        )
+      }
+
       return (
-        <a className="popup" key={src} href={image} onClick={e => this.handleImageClick(src, e)}>
-          <img src={thumb} alt={alt} />
-        </a>
+        <img src={src} alt={alt} />
       )
     }
     return <Tag {...props}>{children}</Tag>
@@ -77,15 +98,26 @@ class WorkTemplate extends React.Component {
 
     const rroute = routes.find(r => r.path === data.slashless(location.pathname))
 
-    images = []
-
     console.assert(nav)
+
+    // Lightbox index from frontmatter
+
+    const lbd = rroute.page.data.lightbox
+
+    this.images = lbd ? _.map(lbd, (alt, key) => {
+      const src = `/images/${key}.jpg`
+      const thumb = `/images/${key}-thumb.jpg`
+      return { key, alt, src, thumb }
+    }) : []
+
+    // SubNav and (inefficient) markdown override
 
     let subnav = []
     let childs = children
 
     if (location.pathname !== route.path) {
       subnav = <SubNav nav={nav} />
+
       childs = (
         <MDReactComponent
           markdownOptions={mdconfig.options}
@@ -96,20 +128,26 @@ class WorkTemplate extends React.Component {
       )
     }
 
+    // Render Lightbox
+
     let lightbox = []
 
-    if (this.state.isOpen) {
+    if (this.state.lit) {
+      const lbsrc = this.lightboxSources()
+      console.log(lbsrc)
       lightbox = (
         <Lightbox
-          mainSrc={images[this.state.index]}
-          nextSrc={images[(this.state.index + 1) % images.length]}
-          prevSrc={images[(this.state.index + images.length - 1) % images.length]}
-          onCloseRequest={this.closeLightbox}
-          onMovePrevRequest={this.movePrev}
-          onMoveNextRequest={this.moveNext}
+          mainSrc={lbsrc.curr}
+          nextSrc={lbsrc.next}
+          prevSrc={lbsrc.prev}
+          onCloseRequest={this.lightboxClose}
+          onMovePrevRequest={this.lightboxPrev}
+          onMoveNextRequest={this.lightboxNext}
         />
       )
     }
+
+    // All together... and 5 - 6 - se -'vn - 8
 
     return (
       <div className="container">
