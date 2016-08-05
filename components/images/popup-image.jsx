@@ -1,12 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router'
+// import { Link } from 'react-router'
 
 const PopupImage = (props) => {
-  const { src, alt } = props
+  const { src, alt, popupHandler } = props
+  console.log(popupHandler)
   return (
-    <Link className="popup" to={`/images/${src}-jpg`}>
+    <a className="popup" href={`/images/${src}-jpg`} onClick={e => popupHandler(src, e)}>
       <img src={`/images/${src}-thumb.jpg`} alt={alt} />
-    </Link>
+    </a>
   )
 }
 
