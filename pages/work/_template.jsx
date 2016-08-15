@@ -124,6 +124,7 @@ class WorkTemplate extends React.Component {
 
     if (rroute) {
       // Index Lightbox image paths from frontmatter
+      console.log(rroute)
 
       const lbdata = access(rroute, 'page.data.lightbox')
       if (lbdata) {

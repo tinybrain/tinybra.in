@@ -1,9 +1,5 @@
 ---
 title: Dolby Evolution
-sub: Realtime system for facilitating trusted CALM act compliance in broadcast networks.
-category: work
-path: /work/evolution
-index: 1
 lightbox:
   evolution: Dolby Evolution
 ---
