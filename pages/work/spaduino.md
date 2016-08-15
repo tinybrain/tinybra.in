@@ -1,9 +1,5 @@
 ---
 title: spaduino
-sub: Arduino + Raspberry Pi + iPhone + Hot Tub!
-category: personal
-path: /work/spaduino
-index: 6
 ---
 
 I really can't stress enough how much anyone reading this should regard this project as **informational only**, and should not under **any circumstances** attempt anything remotely similar. This project describes controlling a rediculous quantity of electricity and high pressure water in close proximity.

@@ -1,9 +1,5 @@
 ---
 title: Dolby Axon
-sub: The Dolby Axon Desktop Client is a social spatial voice application built on top of the Dolby Axon game engine middleware.
-category: work
-path: /work/axon
-index: 3
 lightbox:
   axon-userlist: Axon Userlist
   axon-chat: Axon Chat

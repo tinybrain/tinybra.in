@@ -114,7 +114,8 @@ class WorkTemplate extends React.Component {
 
     // Template doesn't know about subpages so have to go looking
 
-    const rroute = routes.find(r => r.path === data.slashless(location.pathname))
+    const rroute = routes.find(r => r.path === location.pathname)
+    console.log(routes, location.pathname)
 
     // Build elements for non-index pages, i.e. /work/*.md
 
@@ -124,7 +125,6 @@ class WorkTemplate extends React.Component {
 
     if (rroute) {
       // Index Lightbox image paths from frontmatter
-      console.log(rroute)
 
       const lbdata = access(rroute, 'page.data.lightbox')
       if (lbdata) {
