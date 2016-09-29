@@ -1,0 +1,12 @@
+.bottom-space {
+  min-height: 6rem;
+  width: 100%;
+}
+
+footer {
+  border-top: 1px solid #ddd;
+  background-color: #fff;
+  color: #aaa;
+  padding: 2rem 0;
+  font-size: 0.87rem;
+}

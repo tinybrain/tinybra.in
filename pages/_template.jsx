@@ -1,5 +1,6 @@
 import React from 'react'
 import SiteNav from 'components/site/SiteNav'
+import Footer from 'components/site/Footer'
 import { config } from 'config'
 
 import 'static/css/reeeset.css'
@@ -13,10 +14,15 @@ class Template extends React.Component {
     let nav = config.renderSiteNav
     ? <SiteNav {...this.props} /> : []
 
+    let footer = <Footer />
+
     return (
       <div className="wrapper">
         {nav}
-        {children}
+        <main className="site-content">
+          {children}
+        </main>
+        {footer}
       </div>
     )
   }

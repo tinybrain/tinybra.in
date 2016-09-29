@@ -26,6 +26,8 @@ nav.site-nav {
   position: relative;
   float:left;
   margin-right: 30px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .site-nav ul li a {

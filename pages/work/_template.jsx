@@ -168,7 +168,7 @@ class WorkTemplate extends React.Component {
     // All together... AND 5 - 6 - se -'vn - 8
 
     return (
-      <div className="container">
+      <div className="work container">
         {debugnav}
         <Title title="Work" path={route.path} />
         <br />
