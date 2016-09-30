@@ -3,45 +3,56 @@ import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import { config } from 'config'
 
+import Social from './Social'
+
 import './sitenav.css'
 
-class SiteNav extends React.Component {
+const Menu = (props) => {
+  const { location } = props
+  console.assert(location)
 
-  render () {
-    if (config.hideNav) {
-      return null
-    }
+  const menuItems = [
+    ['About', '/'],
+    ['Work', '/work/'],
+    ['Resume', '/resume/'],
+  ]
 
-    const menuItems = [
-      ['Home', '/'],
-      ['Resume', '/resume/'],
-      ['Work', '/work/'],
-      ['Contact', '/contact/'],
-    ]
+  return (
+    <div className="menu">
+      {menuItems.map(([name, link], key) => {
+        let style = location.pathname === prefixLink(link)
+        ? 'active' : ''
+        return (
+          <div key={key} className="menu-item">
+            <Link to={link} className={style}>{name}</Link>
+          </div>
+        )
+      })}
+    </div>
+  )
+}
 
-    const { location } = this.props
+Menu.propTypes = {
+  location: React.PropTypes.object,
+}
 
-    return (
-      <nav className="site-nav">
-        <ul className="site-nav container">
-          {menuItems.map(([name, link], key) => {
-            let style = location.pathname === prefixLink(link)
-            ? 'site-nav active'
-            : 'site-nav'
-            return (
-              <li key={key} className="top-link active">
-                <Link to={link} className={style}>{name}</Link>
-              </li>
-            )
-          })}
-        </ul>
-      </nav>
-    )
+const SiteNav = (props) => {
+  if (config.hideNav) {
+    return null
   }
+
+  return (
+    <header className="site-nav sticky-top">
+      <nav className="container">
+        <Menu {...props} />
+        <Social />
+      </nav>
+    </header>
+  )
 }
 
 SiteNav.propTypes = {
-  location: React.PropTypes.object,
+  // location: React.PropTypes.object,
 }
 
 export default SiteNav

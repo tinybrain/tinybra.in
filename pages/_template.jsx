@@ -19,7 +19,7 @@ class Template extends React.Component {
     return (
       <div className="wrapper">
         {nav}
-        <main className="site-content">
+        <main>
           {children}
         </main>
         {footer}

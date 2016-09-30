@@ -1,47 +1,50 @@
 .site-nav {
   background-color: #fff;
-  overflow: hidden;
-  width: 100%;
   font-family: "Lato";
   font-size: 0.7rem;
   font-weight: 400;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
   text-decoration: none;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
 }
 
-nav.site-nav {
+.sticky-top {
   border-bottom: 1px solid #ddd;
   position:fixed;
   left: 0;
   top: 0;
+  z-index: 99;
 }
 
-.site-nav ul {
-	list-style: none;
-	padding: 0.7rem 0;
-  margin: 0 auto;
-}
-.site-nav ul li {
-  position: relative;
-  float:left;
-  margin-right: 30px;
-  margin-top: 0;
-  margin-bottom: 0;
+.site-nav > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem auto;
 }
 
-.site-nav ul li a {
+.menu {
+  display: flex;
 }
 
-.site-nav ul li a.current {
+.menu-item {
+  margin-right: 1rem;
 }
 
-.site-nav ul li a:hover {
+.social {
+  margin-left: auto;
+}
+
+.social-button {
+  margin-left: 8px;
 }
 
 a {
   transition: color .1s;
   color: #666;
+  text-decoration: none;
 }
 
 a:link,

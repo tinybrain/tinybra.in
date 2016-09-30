@@ -1,21 +1,30 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 html, body, #react-mount, .wrapper {
   background-color: #fff;
   color: #444;
+  margin: 0;
+  height: 100%;
+}
+
+.wrapper {
+  height: 100vh;
   display:flex;
   flex-direction: column;
-  min-height: 100vh;
-}
-
-body {
-  /*lost-utility: edit;*/
-}
-
-main {
-  flex: 1;
 }
 
 .container {
   lost-center: 800px;
+}
+
+main {
+  margin-bottom: 6rem;
+  margin-top: 6rem;
+  flex: 1;
 }
 
 .block {
