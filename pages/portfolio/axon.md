@@ -11,7 +11,7 @@ The Dolby Axon Desktop Client is a social spatial voice application built on top
 
 I handled most of the client’s design and specification, the front-end implementation, and backend services related to account management, social persistence and messaging.
 
-[:ion-link: Dolby Axon][axon]
+:ion-link: [Dolby Axon][axon]
 
 **Languages:** C, C++
 **Technologies:** Win32/[WTL][wtl], [MySQL][mysql], Axon Middleware

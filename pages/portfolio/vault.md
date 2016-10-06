@@ -11,7 +11,7 @@ An enterprise system for optimising and automating the ingest, management and di
 
 The system abstracted media assets, metadata, deliverables, batch processing and manual tasks into a dependancy graph, generating prioritised schedules for users and groups which were presented via various task oriented UIs. On completion of dependant tasks, automated tasks such as media transcoding and program generation were automatically scheduled and dispatched to a render farm.
 
-[:ion-link: SBA Music][sba] 
+:ion-link: [SBA Music][sba] 
 
 **Languages:** C#, C++, Python
 **Technologies:** Windows.Forms, SQL Server, [LLBLGen][llbl], [DirectShow][dshow], [AVISynth][avisynth]

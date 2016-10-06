@@ -41,16 +41,16 @@
   margin-left: 8px;
 }
 
-a {
+.site-nav a {
   transition: color .1s;
   color: #666;
   text-decoration: none;
 }
 
-a:link,
-a:visited { color: #888; }
-a:hover   { color: #d88; }
-a:active  {
+.site-nav a:link,
+.site-nav a:visited { color: #888; }
+.site-nav a:hover   { color: #d88; }
+.site-nav a:active  {
   transition: color .1s;
   color: #dd8;
 }

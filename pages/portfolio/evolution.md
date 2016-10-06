@@ -11,7 +11,7 @@ A realtime system for facilitating trusted CALM act compliance in broadcast netw
 
 This implementation was a technology preview shown at NAB Show® 2012, mainly for technology partners and technical operations executives from major broadcasters (CBS, ESPN, Comcast, etc.).
 
-[:fa-link: Dolby Broadcast Loudness Solutions][dls]
+:fa-link: [Dolby Broadcast Loudness Solutions][dls]
 
 **Languages:** C, C++
 **Technologies:** [Qt][qt], [DD+ (E-AC-3)][a52], [DPLM][dpls]

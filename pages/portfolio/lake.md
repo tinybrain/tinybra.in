@@ -12,8 +12,8 @@ My responsibilities including product specification and development, hardware an
 
 On the latter, I did much of the work integrating and exposing Lab.gruppen’s digital systems and features with the Lake firmware and controller software, including the front panel, 'Load Library' complex impedance load sensing, gain stage configuration, fault protection and other safety features.
 
-[:ion-link: Lab.gruppen - About Lake][lake]
-[:ion-link: Lab.gruppen - PLM Series][plm]
+:ion-link: [Lab.gruppen - About Lake][lake]
+:ion-link: [Lab.gruppen - PLM Series][plm]
 
 **Languages:** C, C++, Matlab
 **Technologies:** Win32/DirectX, [Nucleus RTOS][nucleus], ARM ([SAM7][sam7], [Xscale][pxa]), [Ti C674x][c674x]

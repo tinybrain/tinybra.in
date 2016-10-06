@@ -13,7 +13,7 @@ const Menu = (props) => {
 
   const menuItems = [
     ['About', '/'],
-    ['Work', '/work/'],
+    ['Portfolio', '/portfolio/'],
     ['Resume', '/resume/'],
   ]
 
