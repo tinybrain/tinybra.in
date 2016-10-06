@@ -1,0 +1,32 @@
+.portfolio-item {
+  border-top: 1px solid #ddd;
+  margin: 3rem 0;
+  padding: 3rem 0;
+  lost-utility: clearfix;
+  /*lost-utility: edit;*/
+}
+
+.heading {
+  lost-utility: clearfix;
+}
+
+.info {
+  lost-column: 8/12;
+}
+
+.media {
+  lost-column: 4/12;
+}
+
+.media > img {
+  width: 100%;
+  height: auto;
+}
+
+/*a[href^="https://github.com"]:before {*/
+.github:before {
+  font-family: "Ionicons";
+  content: "\f233";
+  padding-right: 4px;
+  font-size: 18px;
+}
