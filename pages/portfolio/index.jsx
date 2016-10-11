@@ -6,11 +6,12 @@ import _ from 'lodash'
 import './portfolio.css'
 
 const PortfolioItem = (props) => {
-  const { title, sub, image, body } = props.item.data
+  const { item } = props
+  const { title, sub, image, body } = item.page.data
 
   let screenie = null
 
-  const width = _.get(image, 'width', null);
+  const width = _.get(image, 'width', null)
 
   if (typeof image !== 'undefined') {
     const prefix = '/portfolio/images/'
@@ -24,14 +25,14 @@ const PortfolioItem = (props) => {
         zoomImage={{
           src: prefix + image.zoom,
           alt: image.alt,
-          style: width ? { width: width } : null,
+          style: width ? { width } : null,
         }}
       />
     )
   }
 
   return (
-    <section className="portfolio-item">
+    <section id={item.id} className="portfolio-item">
       <div className="heading">
         <h2>{title}</h2>
         <h3>{sub}</h3>
@@ -60,7 +61,7 @@ const Portfolio = (props) => {
   ]
 
   const pageMap = _.keyBy(props.route.pages, (page) => page.path)
-  const pages = portfolioItems.map((item) => pageMap[`/portfolio/${item}/`])
+  const pages = portfolioItems.map((item) => ({ id: item, page: pageMap[`/portfolio/${item}/`] }))
 
   return (
     <div className="container">
@@ -68,7 +69,7 @@ const Portfolio = (props) => {
       <p>My portfolio</p>
       <section className="portfolio">
         {pages.map((item) => (
-          <PortfolioItem {...props} key={item.path} item={item} />
+          <PortfolioItem {...props} key={item.id} item={item} />
         ))}
       </section>
     </div>
