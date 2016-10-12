@@ -46,11 +46,3 @@
   color: #666;
   text-decoration: none;
 }
-
-.site-nav a:link,
-.site-nav a:visited { color: #888; }
-.site-nav a:hover   { color: #d88; }
-.site-nav a:active  {
-  transition: color .1s;
-  color: #dd8;
-}

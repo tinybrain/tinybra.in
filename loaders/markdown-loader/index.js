@@ -4,7 +4,7 @@ import objectAssign from 'object-assign'
 
 const md = markdown({
   html: true,
-  linkify: true,
+  linkify: false,
   typographer: true,
   breaks: true,
 })
