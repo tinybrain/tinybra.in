@@ -81,6 +81,27 @@ a:hover {
   margin: 3rem 0;
 }
 
-.popup:nth-of-type(n+2) {
-  margin-left: 2rem;
+.about {
+  /*max-width: 600*/
+}
+
+.about-header {
+  text-align: center;
+}
+
+#about > #left {
+  lost-column: 1/3;
+}
+
+#about > #right {
+  lost-column: 2/3;
+}
+
+img[alt="Mug"] {
+  width: 20%;
+  border-radius: 50%;
+}
+
+.about-name {
+  /*text-align: center;*/
 }
