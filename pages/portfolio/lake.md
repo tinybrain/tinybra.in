@@ -8,7 +8,7 @@ image:
 ---
 In the live sound industry, the Lake series loudspeaker processors and equalisers are as good as it gets.
 
-My responsibilities including product specification and development, hardware and software validation, manufacturing tests and software engineering. I worked on various parts of the Lake Controller, Preset Manager and firmware for the Clair iO, Lake Contour/Mesa, Dolby Lake Processor (ARM) and Lab.gruppen PLM series (Ti C67x).
+My responsibilities included product specification and development, hardware and software validation, manufacturing tests and software engineering. I worked on various parts of the Lake Controller, Preset Manager and firmware for the Clair iO, Lake Contour/Mesa, Dolby Lake Processor (ARM) and Lab.gruppen PLM series (Ti C67x).
 
 On the latter, I did much of the work integrating and exposing Lab.gruppen’s digital systems and features with the Lake firmware and controller software, including the front panel, 'Load Library' complex impedance load sensing, gain stage configuration, fault protection and other safety features.
 

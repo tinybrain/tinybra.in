@@ -17,7 +17,8 @@ class Template extends React.Component {
     let nav = config.renderSiteNav
     ? <SiteNav {...this.props} /> : []
 
-    let footer = <Footer />
+    // let footer = <Footer />
+    let footer
 
     return (
       <div className="wrapper">

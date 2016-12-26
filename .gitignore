@@ -28,5 +28,8 @@ node_modules
 .gatsby-context.js
 .sass-cache/
 
+# Public Build
+/public
+
 # OSX
 .DS_Store

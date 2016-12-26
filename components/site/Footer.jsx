@@ -11,7 +11,7 @@ class Footer extends React.Component {
     return (
       <footer>
         <div className="container">
-          <p>© 2416 tinybra.in</p>
+          <p>© 2416 tinybra.in, made with <a href="https://github.com/gatsbyjs/gatsby" alt="Gatsby.js">Gatsby.js</a></p>
         </div>
       </footer>
     )

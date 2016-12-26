@@ -1,6 +1,7 @@
 siteTitle="tinybra.in"
-linkPrefix = "/"
+linkPrefix = "http://tinybra.in/"
 
 renderSiteNav = true
 renderTitles = true
 renderDebug = true
+noProductionJavascript = true
