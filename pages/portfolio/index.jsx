@@ -66,12 +66,8 @@ const Portfolio = (props) => {
   return (
     <div className="container">
       <h1>Portfolio</h1>
-      <p>Here are some projects that rate slightly better than half decent.</p>
-      <p>Most of them are from my time as an engineer at Dolby Laboratories and
-        are not open source. I take non-disclosure very seriously, and wouldn't
-        disclose source code even if I had it, which is a pity as a lot of it
-        was pretty badass.
-      </p>
+      <p>Here are some projects that rate slightly better than half decent.
+      Most of them are from my time at Dolby Laboratories and are not open source.</p>
       <section className="portfolio">
         {pages.map((item) => (
           <PortfolioItem {...props} key={item.id} item={item} />

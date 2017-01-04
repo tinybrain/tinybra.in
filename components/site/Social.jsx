@@ -1,7 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router'
 import { IoEmail, IoSocialGithub, IoSocialLinkedin } from 'react-icons/lib/io'
-// import { FaLinkedin, FaGithub } from 'react-icons/lib/fa'
 
 import './Social.css'
 
@@ -39,9 +37,9 @@ class Social extends React.Component {
         {socialItems.map((item, key) => {
           const { title, link, icon } = item
           return (
-            <Link className="social-button" key={key} to={link} title={title}>
+            <a className="social-button" key={key} href={link} title={title}>
               {icon}
-            </Link>
+            </a>
           )
         })}
       </div>

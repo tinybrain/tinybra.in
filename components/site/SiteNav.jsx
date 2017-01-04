@@ -51,8 +51,4 @@ const SiteNav = (props) => {
   )
 }
 
-SiteNav.propTypes = {
-  // location: React.PropTypes.object,
-}
-
 export default SiteNav

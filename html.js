@@ -28,15 +28,15 @@ module.exports = React.createClass({
             content="width=device-width, initial-scale=1.0 maximum-scale=1.0"
           />
           <title>{title}</title>
-          <link rel="shortcut icon" href={this.props.favicon} />
+          {/* <link rel="shortcut icon" href={this.props.favicon} /> */}
           <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i" rel="stylesheet" />
           <link href="https://fonts.googleapis.com/css?family=Oswald:300,400" rel="stylesheet" />
           {css}
         </head>
         <body>
           <div id="react-mount" dangerouslySetInnerHTML={{ __html: this.props.body }} />
-          <script src="/js/polyfill.js" />
-          {/* <script src={prefixLink(`/bundle.js?t=${BUILD_TIME}`)} /> */}
+          {/* <script src="/js/polyfill.js" /> */}
+          <script src={prefixLink(`/bundle.js?t=${BUILD_TIME}`)} />
         </body>
       </html>
     )

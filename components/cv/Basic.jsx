@@ -2,27 +2,30 @@ import React from 'react'
 
 import './Basic.css'
 
-class Basic extends React.Component {
+const BasicItem = (props) => {
+  const { title, sub } = props.item
+  return (
+    <div key={title} className="item">
+      <strong>{title}</strong><br />
+      {sub}<br />
+    </div>
+  )
+}
 
-  renderBasicItem (item) {
-    const { title, sub } = item
-    return (
-      <div key={title} className="item">
-        <strong>{title}</strong><br />
-        {sub}<br />
-      </div>
-    )
-  }
+BasicItem.propTypes = {
+  item: React.PropTypes.object.isRequired,
+}
 
-  render () {
-    const { title, items } = this.props.data
-    return (
-      <div className="block">
-        <h2>{title}</h2>
-        {items.map(this.renderBasicItem, this)}
-      </div>
-    )
-  }
+const Basic = (props) => {
+  const { title, items } = props.data
+  return (
+    <div className="block">
+      <h2>{title}</h2>
+      {items.map((item, key) => (
+        <BasicItem key={key} item={item} />
+      ))}
+    </div>
+  )
 }
 
 Basic.propTypes = {

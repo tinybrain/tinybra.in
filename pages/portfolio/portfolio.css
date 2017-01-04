@@ -22,11 +22,3 @@
   width: 100%;
   height: auto;
 }
-
-/*a[href^="https://github.com"]:before {*/
-.github:before {
-  font-family: "Ionicons";
-  content: "\f233";
-  padding-right: 4px;
-  font-size: 18px;
-}

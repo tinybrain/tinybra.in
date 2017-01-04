@@ -2,27 +2,30 @@ import React from 'react'
 
 import './Employment.css'
 
-class Employment extends React.Component {
+const EmploymentItem = (props) => {
+  const { employer, title, location, period } = props.item
+  return (
+    <div className="item">
+      <strong>{employer}</strong> • {title}<br />
+      {period}, {location}
+    </div>
+  )
+}
 
-  renderEmploymentItem (item, key) {
-    const { employer, title, location, period } = item
-    return (
-      <div key={key} className="item">
-        <strong>{employer}</strong> • {title}<br />
-        {period}, {location}
-      </div>
-    )
-  }
+EmploymentItem.propTypes = {
+  item: React.PropTypes.object.isRequired,
+}
 
-  render () {
-    const { title, items } = this.props.employment
-    return (
-      <div className="block">
-        <h2>{title}</h2>
-        {items.map(this.renderEmploymentItem, this)}
-      </div>
-    )
-  }
+const Employment = (props) => {
+  const { title, items } = props.employment
+  return (
+    <div className="block">
+      <h2>{title}</h2>
+      {items.map((item, key) => (
+        <EmploymentItem key={key} item={item} />
+      ))}
+    </div>
+  )
 }
 
 Employment.propTypes = {

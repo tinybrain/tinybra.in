@@ -1,6 +1,5 @@
 import React from 'react'
 import SiteNav from 'components/site/SiteNav'
-import Footer from 'components/site/Footer'
 import { config } from 'config'
 
 import 'static/css/reeeset.css'

@@ -2,40 +2,51 @@ import React from 'react'
 
 import './SkillTable.css'
 
-class SkillTable extends React.Component {
-  renderSkill (item, key) {
-    const [skill, years, score] = item.split(', ')
-    return (
-      <div key={key} className="skill">
-        <div className="skill-name">{skill}</div>
-        <div className="skill-years">{`${years}y`}</div>
-        <div className="skill-score">
-          <div className="score-value" style={{ width: `${score}%` }}>
-          </div>
+const Skill = (props) => {
+  const { item } = props
+  const [skill, years, score] = item.split(', ')
+  return (
+    <div className="skill">
+      <div className="skill-name">{skill}</div>
+      <div className="skill-years">{`${years}y`}</div>
+      <div className="skill-score">
+        <div className="score-value" style={{ width: `${score}%` }}>
         </div>
       </div>
-    )
-  }
+    </div>
+  )
+}
 
-  renderSkillset (skillset) {
-    return (
-      <div key={skillset.title} className="skillset">
-        <h3>{skillset.title}</h3>
-        {skillset.items.map(this.renderSkill, this)}
-      </div>
-    )
-  }
+Skill.propTypes = {
+  item: React.PropTypes.string.isRequired,
+}
 
-  render () {
-    const skillsets = this.props.skillsets
+const SkillSet = (props) => {
+  const { skillset } = props
+  return (
+    <div className="skillset">
+      <h3>{skillset.title}</h3>
+      {skillset.items.map((item, key) => (
+        <Skill key={key} item={item} />
+      ))}
+    </div>
+  )
+}
 
-    return (
-      <div className="block">
-        <h2>Skills</h2>
-        {skillsets.map(this.renderSkillset, this)}
-      </div>
-    )
-  }
+SkillSet.propTypes = {
+  skillset: React.PropTypes.object.isRequired,
+}
+
+const SkillTable = (props) => {
+  const { skillsets } = props
+  return (
+    <div className="block">
+      <h2>Skills</h2>
+      {skillsets.map((skillset) => (
+        <SkillSet key={skillset.title} skillset={skillset} />
+      ))}
+    </div>
+  )
 }
 
 SkillTable.propTypes = {
