@@ -20,6 +20,6 @@ Amongst my weaponry are such diverse elements as professional audio & video, sig
 
 Feel free to check out the very brief version of my [resumé](/resume/), some selected projects in my [portfolio](/portfolio/) - almost none of which are on :ion-social-github: [GitHub](https://github.com/tinybrain/).
 
-If you wish to contact me, might I suggest via :ion-email: [email](mailto:simon@tinybra.in) or :ion-social-linkedin: [LinkedIn](https://www.linkedin.com/in/tinybrain)
+If you wish to contact me, might I suggest via [email](mailto:simon@tinybra.in) or [LinkedIn](https://www.linkedin.com/in/tinybrain).
 
 </div>
