@@ -1,6 +1,13 @@
 /*@lost gutter 60px;*/
 /*@lost flexbox flex;*/
 
+/* --- Media --- */
+
+@custom-media --small (width < 800px );
+@custom-media --not-small (width >= 800px);
+
+/* --- Layout --- */
+
 body {
   /*lost-utility: edit;*/
 }
@@ -11,7 +18,10 @@ body {
   box-sizing: border-box;
 }
 
-html, body, #react-mount, .wrapper {
+html,
+body,
+#react-mount,
+.wrapper {
   background-color: #fff;
   color: #666;
   margin: 0;
@@ -22,16 +32,27 @@ html, body, #react-mount, .wrapper {
   height: 100vh;
   display:flex;
   flex-direction: column;
+
+  @media (--small) {
+    padding: 0 0.7rem;
+  }
 }
 
 .container {
-  lost-center: 800px;
+  lost-center: 780px;
 }
 
 main {
-  margin-bottom: 6rem;
-  margin-top: 6rem;
-  /*flex: 1;*/
+  @media (--small) {
+    margin-bottom: 3rem;
+    margin-top: 4rem;
+  }
+
+  @media (--not-small) {
+    margin-bottom: 6rem;
+    margin-top: 6rem;
+  }
+  flex: 1;
 }
 
 .block {
@@ -39,6 +60,8 @@ main {
   padding-top: 1.4rem;
   padding-bottom: 1.6rem;
 }
+
+/* --- Type --- */
 
 h1 { color: #666; }
 h2 { color: #666; }
@@ -69,33 +92,37 @@ a {
   color: #4e7dc5;
   text-decoration: none;
   transition: all .3s;
+
+  & :hover {
+    color: #2774fe;
+  }
 }
 
-a:hover {
-  color: #2774fe;
+/* --- About Page --- */
+
+.about {
+  max-width: 500px;
+  margin: 0 auto;
+
+  & .hero {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    & img[alt="Mug"] {
+      width: 30%;
+      border-radius: 50%;
+    }
+
+    & .url {
+      text-transform: none;
+    }
+  }
 }
+
+/* --- Misc --- */
 
 [data-info="screenies"] {
   width: 100%;
   text-align: center;
   margin: 3rem 0;
-}
-
-.about {
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.about-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-img[alt="Mug"] {
-  width: 30%;
-  border-radius: 50%;
-}
-
-.about-url {
-  text-transform: none;
 }

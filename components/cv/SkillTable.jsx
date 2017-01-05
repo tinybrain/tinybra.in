@@ -7,9 +7,9 @@ const Skill = (props) => {
   const [skill, years, score] = item.split(', ')
   return (
     <div className="skill">
-      <div className="skill-name">{skill}</div>
-      <div className="skill-years">{`${years}y`}</div>
-      <div className="skill-score">
+      <div className="name">{skill}</div>
+      <div className="years">{`${years}y`}</div>
+      <div className="score">
         <div className="score-value" style={{ width: `${score}%` }}>
         </div>
       </div>

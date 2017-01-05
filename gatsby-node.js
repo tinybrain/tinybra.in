@@ -12,7 +12,7 @@ exports.modifyWebpackConfig = function(config, env) {
       rucksack(),
       cssnext({
         browsers: ['>1%', 'last 2 versions']
-      })
+      }),
     ]
   })
 

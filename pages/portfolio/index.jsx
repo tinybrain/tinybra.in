@@ -1,7 +1,8 @@
 import React from 'react'
-// import { Link } from 'react-router'
 import ImageZoom from 'react-medium-image-zoom'
 import _ from 'lodash'
+
+import Title from 'components/site/Title'
 
 import './portfolio.css'
 
@@ -65,7 +66,7 @@ const Portfolio = (props) => {
 
   return (
     <div className="container">
-      <h1>Portfolio</h1>
+      <Title title="Portfolio" />
       <p>Here are some projects that rate slightly better than half decent.
       Most of them are from my time at Dolby Laboratories and are not open source.</p>
       <section className="portfolio">

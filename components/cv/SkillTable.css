@@ -1,33 +1,34 @@
-.skill {
-  lost-utility: clearfix;
-}
+/* --- Skillset --- */
 
-.skillset {
-  margin-bottom: 1rem;
-}
-
+.skillset,
 .skillset h3 {
   margin-bottom: 1rem;
 }
 
-.skill-name {
-  lost-column: 4/13;
-}
+/* --- Skill --- */
 
-.skill-years {
-  lost-column: 2/13;
-  text-align: right;
-}
+.skill {
+  lost-utility: clearfix;
 
-.skill-score {
-  lost-column: 7/13;
-  margin: 0.35rem 0;
-  /*background-color: #AAA;*/
-  border: 1px solid #aaa;
-  padding: 1px;
-}
+  & .name {
+    lost-column: 4/13;
+  }
 
-.score-value {
-  height: 0.5rem;
-  background-color: #888;
+  & .years {
+    lost-column: 2/13;
+    text-align: right;
+  }
+
+  & .score {
+    lost-column: 7/13;
+    margin: 0.35rem 0;
+    /*background-color: #AAA;*/
+    border: 1px solid #aaa;
+    padding: 1px;
+  }
+
+  & .score-value {
+    height: 0.5rem;
+    background-color: #AAA;
+  }
 }

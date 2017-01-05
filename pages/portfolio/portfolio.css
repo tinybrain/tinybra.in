@@ -1,3 +1,6 @@
+@custom-media --small (width < 800px );
+@custom-media --not-small (width >= 800px);
+
 .portfolio-item {
   border-top: 1px solid #ddd;
   margin: 3rem 0;
@@ -10,15 +13,33 @@
   lost-utility: clearfix;
 }
 
-.info {
-  lost-column: 8/12;
+@media (--small) {
+  .info {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .media {
+    lost-center: 50%;
+
+    & > img {
+      width: 100%;
+      height: auto;
+    }
+  }
 }
 
-.media {
-  lost-column: 4/12;
-}
+@media (--not-small) {
+  .info {
+    lost-column: 8/12;
+  }
 
-.media > img {
-  width: 100%;
-  height: auto;
+  .media {
+    lost-column: 4/12;
+
+    & > img {
+      width: 100%;
+      height: auto;
+    }
+  }
 }

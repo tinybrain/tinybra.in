@@ -29,8 +29,8 @@ module.exports = React.createClass({
           />
           <title>{title}</title>
           {/* <link rel="shortcut icon" href={this.props.favicon} /> */}
-          <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i" rel="stylesheet" />
-          <link href="https://fonts.googleapis.com/css?family=Oswald:300,400" rel="stylesheet" />
+          {/* <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=Oswald:300,400" rel="stylesheet" /> */}
           {css}
         </head>
         <body>

@@ -16,10 +16,10 @@ class Resume extends React.Component {
       <div className="container">
         <Title title="Resume" />
         <div className="row">
-          <div className="left">
+          <div className="employment">
             <Employment employment={cv.employment} />
           </div>
-          <div className="right">
+          <div className="skills">
             <SkillTable skillsets={[cv.languages, cv.platforms, cv.design]} />
           </div>
         </div>

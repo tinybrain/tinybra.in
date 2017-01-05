@@ -1,13 +1,26 @@
+@custom-media --small (width < 800px );
+@custom-media --not-small (width >= 800px);
+
 .row {
   lost-utility: clearfix;
 }
 
-.left {
-  lost-column: 3/5;
+@media (--small) {
+  .employment,
+  .skills {
+    width: 100%;
+  }
 }
 
-.right {
-  lost-column: 2/5;
+@media (--not-small) {
+
+  .employment {
+    lost-column: 3/5;
+  }
+
+  .skills {
+    lost-column: 2/5;
+  }
 }
 
 .item:nth-of-type(n+2) {

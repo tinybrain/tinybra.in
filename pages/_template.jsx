@@ -6,7 +6,7 @@ import 'static/css/reeeset.css'
 import 'static/css/base.css'
 import 'static/css/type.css'
 
-import 'static/fa/css/font-awesome.css'
+//import 'static/fa/css/font-awesome.css'
 import 'static/ion/css/ionicons.css'
 
 class Template extends React.Component {
@@ -23,7 +23,7 @@ class Template extends React.Component {
       <div className="wrapper">
         {nav}
         <main>
-          <div className="container">
+          <div>
             {children}
           </div>
         </main>
