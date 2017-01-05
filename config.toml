@@ -1,5 +1,5 @@
 siteTitle = "tinybra.in"
-linkPrefix = ""
+linkPrefix = "http://tinybra.in/"
 
 renderSiteNav = true
 renderTitles = true
