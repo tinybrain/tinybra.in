@@ -1,7 +1,25 @@
-siteTitle="tinybra.in"
-linkPrefix = "http://tinybra.in/"
+siteTitle = "tinybra.in"
+linkPrefix = ""
 
 renderSiteNav = true
 renderTitles = true
 renderDebug = true
-noProductionJavascript = true
+noProductionJavascript = false
+
+[portfolio]
+title = "Portfolio"
+
+sub = """
+Here are some projects that rate slightly better than half decent.
+Most of them are from my time at Dolby Laboratories and are not open source.
+"""
+
+items = [
+  'spaduino',
+  'evolution',
+  'voice',
+  'axon',
+  'lake',
+  'vault',
+  'boom',
+]

@@ -1,78 +1,24 @@
 import React from 'react'
-import ImageZoom from 'react-medium-image-zoom'
 import _ from 'lodash'
 
+import { config } from 'config'
+
 import Title from 'components/site/Title'
+import PortfolioItem from 'components/portfolio/PortfolioItem'
 
 import './portfolio.css'
 
-const PortfolioItem = (props) => {
-  const { item } = props
-  const { title, sub, image, body } = item.page.data
-
-  let screenie = null
-
-  const width = _.get(image, 'width', null)
-
-  if (typeof image !== 'undefined') {
-    const prefix = '/portfolio/images/'
-
-    screenie = (
-      <ImageZoom
-        image={{
-          src: prefix + image.src,
-          alt: image.alt,
-        }}
-        zoomImage={{
-          src: prefix + image.zoom,
-          alt: image.alt,
-          style: width ? { width } : null,
-        }}
-      />
-    )
-  }
-
-  return (
-    <section id={item.id} className="portfolio-item">
-      <div className="heading">
-        <h2>{title}</h2>
-        <h3>{sub}</h3>
-      </div>
-      <div className="info" dangerouslySetInnerHTML={{ __html: body }} />
-      <div className="media">
-        {screenie}
-      </div>
-    </section>
-  )
-}
-
-PortfolioItem.propTypes = {
-  item: React.PropTypes.object,
-}
-
 const Portfolio = (props) => {
-  const portfolioItems = [
-    'spaduino',
-    'evolution',
-    'voice',
-    'axon',
-    'lake',
-    'vault',
-    'boom',
-  ]
-
+  const { title, sub, items } = config.portfolio
   const pageMap = _.keyBy(props.route.pages, (page) => page.path)
-  const pages = portfolioItems.map((item) => ({ id: item, page: pageMap[`/portfolio/${item}/`] }))
+  const pages = items.map((item) => ({ id: item, page: pageMap[`/portfolio/${item}/`] }))
 
   return (
     <div className="container">
-      <Title title="Portfolio" />
-      <p>Here are some projects that rate slightly better than half decent.
-      Most of them are from my time at Dolby Laboratories and are not open source.</p>
+      <Title title={title} />
+      <p>{sub}</p>
       <section className="portfolio">
-        {pages.map((item) => (
-          <PortfolioItem {...props} key={item.id} item={item} />
-        ))}
+        {pages.map((item) => <PortfolioItem {...props} key={item.id} item={item} />)}
       </section>
     </div>
   )
